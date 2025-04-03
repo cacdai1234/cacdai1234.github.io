@@ -3,34 +3,91 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Giới Thiệu Bản Thân</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            text-align: center;
-            margin: 50px;
-            background-color: #f4f4f4;
-        }
-        .container {
-            max-width: 600px;
-            background: white;
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-            margin: auto;
-        }
-        img {
-            width: 150px;
-            border-radius: 50%;
-        }
-    </style>
+    <title>Cày Thuê Free Fire</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div class="container">
-        <img src="https://via.placeholder.com/150" alt="Ảnh đại diện">
-        <h1>Xin chào, tôi là [Tên Bạn]</h1>
-        <p>Đây là trang web cá nhân của tôi.</p>
-        <p>Liên hệ: <a href="mailto:youremail@example.com">youremail@example.com</a></p>
-    </div>
+    <header>
+        <h1>Chào mừng đến với dịch vụ cày thuê Free Fire</h1>
+    </header>
+    
+    <section class="price-table">
+        <h2>Bảng Giá Cày Rank</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Từ Rank</th>
+                    <th>Đến Rank</th>
+                    <th>Giá (VNĐ)</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Đồng</td>
+                    <td>Huyền Thoại</td>
+                    <td>30.000</td>
+                </tr>
+                <tr>
+                    <td>Huyền Thoại</td>
+                    <td>Đại Cao Thủ</td>
+                    <td>70.000</td>
+                </tr>
+                <tr>
+                    <td>Đại Cao Thủ</td>
+                    <td>Thách Đấu 6</td>
+                    <td>80.000</td>
+                </tr>
+                <tr>
+                    <td>Thách Đấu 6</td>
+                    <td>Thách Đấu 4</td>
+                    <td>100.000</td>
+                </tr>
+                <tr>
+                    <td>Thách Đấu 4</td>
+                    <td>Thách Đấu 3</td>
+                    <td>120.000</td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+
+    <section class="rank-price">
+        <h2>Chọn Rank cày thuê</h2>
+        <label for="rank-from">Từ Rank:</label>
+        <select id="rank-from">
+            <option value="Đồng">Đồng</option>
+            <option value="Huyền Thoại">Huyền Thoại</option>
+            <option value="Đại Cao Thủ">Đại Cao Thủ</option>
+            <option value="Thách Đấu 6">Thách Đấu 6</option>
+            <option value="Thách Đấu 4">Thách Đấu 4</option>
+            <option value="Thách Đấu 3">Thách Đấu 3</option>
+        </select>
+
+        <label for="rank-to">Đến Rank:</label>
+        <select id="rank-to">
+            <option value="Huyền Thoại">Huyền Thoại</option>
+            <option value="Đại Cao Thủ">Đại Cao Thủ</option>
+            <option value="Thách Đấu 6">Thách Đấu 6</option>
+            <option value="Thách Đấu 4">Thách Đấu 4</option>
+            <option value="Thách Đấu 3">Thách Đấu 3</option>
+        </select>
+
+        <button id="calculate-rank-btn">Tính giá cày rank</button>
+        <p id="rank-price-display"></p>
+    </section>
+
+    <section class="sao-price">
+        <h2>Chọn số sao cày thuê</h2>
+        <label for="sao-input">Số sao:</label>
+        <input type="number" id="sao-input" min="0.5" max="2" step="0.5">
+        <button id="calculate-sao-btn">Tính giá cày sao</button>
+        <p id="price-display"></p>
+    </section>
+
+    <footer>
+        <p>Liên hệ với chúng tôi qua email: support@caythueff.com</p>
+    </footer>
+    
+    <script src="script.js"></script>
 </body>
 </html>
